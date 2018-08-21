@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose dashboard</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+  <div id="wrapper">
+    <h1>The Dojo Message Board</h1>
+    <hr></hr>
+    <form method="post" action="/messages/new">
+      Name:
+      <p><input type="text" id="name" name="name" class="small" /></p>
+
+      Message:
+      <p><input type="text" id="message" name="message" class="big"/></p>
+
+      <p><input type="submit" value="Post Message" id="submit" name="submit" /></p>
+
+    </form>
+
+    <div id="errMessage">
+            <% if(messages.messages) { %>
+                <% for (let message of messages.messages) { %>
+                <h2><%= message %></h2>
+                <% } %>
+            <% } %>
+            <% if(messages.comments) { %>
+                <% for (let message of messages.comments) { %>
+                <h3><%= message %></h3>
+                <% } %>
+            <% } %>
+    </div>
+
+    <ul>
+         <% if (all_messages.length) { %>
+             <% for (let message of all_messages) { %>
+             <li class="message">
+                 <p>Name: <%= message.name %></p>
+                 <p>Message: <%= message.content %></p>
+
+                 <% if (message.comments.length) { %>
+
+                 <ul>
+                     <% for (let comment of message.comments) { %>
+                     <li class="comment">
+                         <p>Name: <%= comment.name %></p>
+                         <p>Message: <%= comment.content %></p>
+                     </li>
+                     <% } %>
+                 </ul>
+                 <% } %>
+                 <form action="/messages/<%= message.id %>/comments/new" method="post">
+                     <label for="name">Name: </label>
+                     <input type="text" name="name">
+                     <label for="content">Comment: </label>
+                     <input type="text" name="content">
+                     <input type="submit" value="Post Comment">
+                 </form>
+             </li>
+             <% } %>
+
+         <% } %>
+         </ul>
+
+  </div>
+</body>
+</html>

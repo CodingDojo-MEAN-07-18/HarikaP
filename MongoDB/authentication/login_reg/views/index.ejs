@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose dashboard</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <div id="errors">
+    </div>
+    
+    <h2>Registration</h2>
+          <form action="/register" method="post">
+
+          	<p><label for ="f_name">First Name:</label><input type="text" name="f_name" id="f_name"/></p>
+          	<p><label for ="l_name">Last Name:</label><input type="text" name="l_name" id="l_name"/></p>
+          	<p><label for ="email">Email:</label><input type="email" name="email" id="email"/></p>
+          	<p><label for ="password">Password:</label><input type="password" name="password" id="password"/></p>
+          	<p><label>Birthday:</label><input type="date" name="bday" id="bday"/></p>
+          	<p><input type="submit" value="Register"/></p>
+          </form>
+      <h2>Login</h2>
+        <form action="/login" method="post">
+        	<label>Email:</label><input type="text" name="email"><br><br>
+        	<label>Password:</label><input type="password" name="password"><br><br>
+        	<input type="submit" value="Login">
+        </form>
+  </div>
+</body>
+</html>
