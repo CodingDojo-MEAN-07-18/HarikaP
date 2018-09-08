@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<div class="zones">
+    <button (click) = "setZone('PDT')" [ngClass] = "{clicked : zone === 'PDT'}" class="button">PDT</button>
+    <button (click) = "setZone('MDT')" [ngClass] = "{clicked : zone === 'MDT'}"class="button">MDT</button>
+    <button (click) = "setZone('CDT')" [ngClass] = "{clicked : zone === 'CDT'}"class="button">CDT</button>
+    <button (click) = "setZone('EDT')" [ngClass] = "{clicked : zone === 'EDT'}"class="button">EDT</button>
+    <button (click) = "setZone('clear')" class="button">Clear</button>
+</div>
+<h1>{{ time | date:"medium":zone }}</h1>
