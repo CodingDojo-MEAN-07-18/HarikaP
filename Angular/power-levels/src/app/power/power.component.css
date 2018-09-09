@@ -1,0 +1,21 @@
+.main {
+    background-color:yellow;
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 100px;
+  }
+
+  .card {
+    background-color: lightgoldenrodyellow;
+    text-align: left;
+    width: 275px;
+    height: 125px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 15px;
+    padding: 5px;
+    vertical-align: top;
+}
+  

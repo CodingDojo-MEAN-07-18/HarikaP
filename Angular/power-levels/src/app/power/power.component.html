@@ -1,0 +1,25 @@
+<div class="main">
+
+    <h3>Power Component</h3>
+  
+    <div>
+  
+      <div>
+        <p>Initial Power Level:
+        <input type="number"  max="100" min="0" [(ngModel)]="power"/>
+        <button>Calculate Powers </button>
+        </p>
+  
+      </div>
+  
+    </div>
+  
+    <div class="body">
+      <app-human [power]="power"class='card'></app-human>
+      <app-saiyan [power]="power"class='card'></app-saiyan>
+      <app-super-saiyan [power]="power"class='card'></app-super-saiyan>
+      <app-super-saiyan2 [power]="power"class='card'></app-super-saiyan2>
+      <app-super-saiyan3 [power]="power"class='card'></app-super-saiyan3>
+      <app-super-saiyan4 [power]="power"class='card'></app-super-saiyan4>
+    </div>
+  </div>
