@@ -1,0 +1,25 @@
+.addquote {
+    width: 300px;
+    display: inline-block;
+}
+button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.errors{
+    color:red;
+    display: inline-block;
+    vertical-align: top;
+}
+button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
